@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffcc33;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100vh;
+}
+
+.main-container {
+  flex-grow: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* header and footer section */
+
+#header {
+  background-color: rgba(0, 0, 0, 0.1);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+#footer {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 70px;
+}
+
+#header {
+  margin: 0;
+  padding: 10px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header .container,
+#footer .container {
+  background-color: transparent;
+  color: #000;
+  flex-grow: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  margin-left: 1rem;
+}
+
+.header-nav ul,
+.footer-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.header-nav a,
+.footer-nav a {
+  color: inherit;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.header-nav a:hover,
+.footer-nav a:hover {
+  color: #adadad;
+}
+
+/* main body sections */
+
+/* features section */
+
+#features {
+  text-align: center;
+  margin: 0 auto;
+}
+
+#features .content {
+  background-color: rgba(0, 150, 0, 0.4);
+  flex-grow: 1;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#features .content > * {
+  background-color: rgba(0, 150, 0, 0.7);
+  flex-basis: 100%;
+  margin: 10px;
+  padding: 10px;
+}
+
+#features .title,
+#pricing .title {
+  font-size: 3rem;
+  margin: 10px;
+}
+
+#features .content .col h2,
+#features .content .col i {
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+#features .content .col p {
+  font-size: 1.15rem;
+  text-align: justify;
+}
+
+@media (max-width: 800px) {
+  #features .content,
+  #pricing .container {
+    flex-direction: column;
+  }
+}
+
+/* pricing section */
+#pricing {
+  flex-grow: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  text-align: center;
+}
+
+#pricing .container,
+#pricing .container .price-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#pricing .container .price-card {
+  flex-direction: column;
+  margin: 10px;
+}
+
+#pricing .container .price-card > * {
+  margin: 10px;
+}
+
+#pricing .container .price-card p span {
+  display: block;
+}
+
+#pricing .container .price-card img {
+  width: 400px;
+  height: 400px;
+  max-width: 100%;
+}
+
+/* sign up section */
+
+.sign-up-section {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-content: center;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.sign-up-text {
+  color: #000;
+  font-size: 3.5em;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.accent-text {
+  color: #d14009;
+}
+
+.sign-up-form {
+  background-color: rgb(209, 64, 9, 0.7);
+  width: 50vw;
+  max-width: 50%;
+  padding: 2rem 4rem;
+  border-radius: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.input-group:last-child {
+  margin-bottom: 0;
+}
+
+.input-group label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.input-group input {
+  border: 1px solid #2e3852;
+  border-radius: 5px;
+  font-size: 1em;
+  outline: 0;
+  padding: 0.5em;
+  color: #985b10;
+}
+
+.input-group input:focus {
+  border-color: #596da0;
+}
+
+.btn {
+  border: 1px solid #2e3852;
+  border-radius: 0.5rem;
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.75rem 1.25rem;
+  outline: 0;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: rgba(246, 224, 0, 0.1);
+}
+
+@media (max-width: 900px) {
+  .sign-up-section {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .sign-up-form {
+    width: 50vw;
+    max-width: inherit;
+    margin: 2rem auto;
+  }
+
+  .sign-up-text {
+    text-align: center;
+  }
+}
